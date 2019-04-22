@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Domine');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 150px;
+    text-transform: uppercase;
+    margin: 1.25rem 0 0 0;
+}
+
+p{
+    max-width: 650px;
+    margin-top: 0px;
+    margin-bottom: 44px;
+    font-family: 'Merriweather', serif;
+    color: #737373;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.p-capital{
+    font-size: 71px;
+    color: #4f4f4f;
+    line-height: 68px;
+    display: block;
+    float: left;
+    margin: 0 14px 0 0;
+}
+
+.p-sub{
+    margin-top: 40px;
+    font-family: 'Domine', sans-serif;
+    font-size: 30px;
+    color: #4f4f4f;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+/******** STELLAR  ********/
+
+.hero{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* left container */
+
+.left-container{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(3, 3, 3, 0.6)), url("../assets/stellar/stellar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 0%, -121px 50%;
+    z-index: 1;
+}
+
+.butn-back{
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    height: 5%;
+    top: 0%;
+    right: 4%;
+    padding-top: 2.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    transform: translateX(0px);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.butn-back:hover{
+    transform: translateX(-20px);
+    transition: 500ms;
+}
+
+.butn-back>img{
+    display: inline-block;
+    width: 9px;
+    margin-right: 10px;
+    vertical-align: -20%;
+}
+
+.left-content-container{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0,0,0,1) );
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 500ms;
+}
+
+.left-content{
+    position: absolute;
+    bottom: 7%;
+    right: 5%;
+    width: 50%;
+    text-align: right;
+}
+
+.tag{
+    float: right;
+    background-color: rgb(85, 88, 161);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 3px 10px;
+}
+
+.left-content-h1{
+    color: #fff;
+    font-size: 100px;
+    line-height: 110px;
+}
+
+.left-content-p{
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    padding-left: 4rem;
+    font-size: 24px;
+}
+
+
+/* right container */
+
+.right-w-container{
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 0 4% 0 3%;
+    overflow: auto;
+    z-index: -1;
+}
+
