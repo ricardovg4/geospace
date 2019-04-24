@@ -8,6 +8,8 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 h1{
@@ -53,22 +55,27 @@ p{
 
 .hero{
     height: 100%;
-    width: 100%;
+    width: calc(100% / 3);
     overflow: hidden;
+    position: absolute;
+    transition: 500ms ease 0s;
+}
+
+.stellar{
 }
 
 /* left container */
 
 .left-container{
-    position: relative;
-    float: left;
-    width: 50%;
+    position: absolute;
+    width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(3, 3, 3, 0.6)), url("../assets/stellar/stellar.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 0%, -121px 50%;
-    z-index: 1;
+    background-position: center;
+    transition: 500ms ease 0s;
+    z-index: 2;
 }
 
 .butn-back{
@@ -82,9 +89,9 @@ p{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 11px;
     font-weight: 600;
-    transform: translateX(0px);
     transition: 500ms;
     cursor: pointer;
+    opacity: 0;
 }
 
 .butn-back:hover{
@@ -106,15 +113,15 @@ p{
     position: absolute;
     bottom: 0%;
     opacity: 0;
-    transform: translateY(100px);
-    transition: 500ms;
+    /* transition: 500ms; */
 }
 
 .left-content{
+    max-width: 400px;
     position: absolute;
     bottom: 7%;
     right: 5%;
-    width: 50%;
+    width: 100%;
     text-align: right;
 }
 
@@ -128,6 +135,7 @@ p{
     font-weight: 600;
     line-height: 20px;
     padding: 3px 10px;
+    margin-left: 10px;
 }
 
 .left-content-h1{
@@ -139,7 +147,7 @@ p{
 .left-content-p{
     color: rgba(255, 255, 255, 0.7);
     text-align: right;
-    padding-left: 4rem;
+    padding-left: 8rem;
     font-size: 24px;
 }
 
@@ -147,12 +155,77 @@ p{
 /* right container */
 
 .right-w-container{
+    background-color: #fff;
     box-sizing: border-box;
+
     width: 50%;
     height: 100%;
     float: left;
     padding: 0 4% 0 3%;
     overflow: auto;
-    z-index: -1;
+    transform: translateX(-200%);
+    transition: 500ms ease 0s;
 }
 
+/******* NATIVE ********/
+
+.native{
+    /* z-index: 1; */
+    left: 33.33%;
+}
+.left-native{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(3, 3, 3, 0.6)), url("../assets/native/native.jpg");
+    position: absolute;
+}
+
+/* left container */
+
+.lfc-native{
+    opacity: 0;
+
+}
+
+
+.lfc-native .tag{
+    background-color: #55a18d;
+}
+
+
+
+/******** SHARK ********/
+
+.shark{
+    left: 66.66%;
+    
+}
+
+.left-shark{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 30%, rgba(3, 3, 3, 0.6)), url("../assets/shark/shark.jpg");
+}
+
+.w-shark{
+    transform: translateX(200%);
+}
+
+.lfc-shark .tag{
+    background-color: #c49854;
+}
+
+.lc-shark{
+    left: 5%;
+    float: left;
+    text-align: left;
+}
+
+.lc-shark p{
+    text-align: left;
+    padding-left: 0;
+    padding-right: 8rem;
+
+}
+
+.lc-shark .tag{
+    float: left;
+    margin-left: 0px;
+    margin-right: 50%;
+}
